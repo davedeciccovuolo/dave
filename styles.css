@@ -7,6 +7,14 @@
 }
 
 /* impostazione testi */
+html {
+    font-size: 21px;
+}
+
+.anchor {
+    position: relative;
+    top: -4rem;
+}
 
 h1 {
     color: var(--coal);
@@ -19,12 +27,13 @@ h1 {
 
 h2 {
     color: var(--coalette);
-    margin-left: 5%;
-    padding-left: 1rem;
+    margin-right: 5%;
+    padding-right: 1rem;
     font-family: "Archivo Narrow";
     font-size: 3rem;
     font-weight: 40;
     mix-blend-mode: multiply;
+    justify-self: right;
 }
 
 h4 {
@@ -72,13 +81,16 @@ nav {
     background-color: var(--paper);
     border: 1px solid var(--coal);
     box-shadow: 0px 10px var(--coal);
-
 }
 
-nav li {
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+}
+
+nav ul li {
     padding: 10px;
-    flex: 1;
-    display: inline-flex;
 
 }
 
@@ -113,15 +125,17 @@ section {
 /* color section  */
 
 .color div {
+    max-width: 500px;
     min-width: 80px;
-    max-width: 110px;
-    width: auto;
+
     height: auto;
     justify-content: space-around;
     margin: 10px;
     border: 1px solid var(--coal);
     box-shadow: 0px 10px var(--coal);
+    overflow: hidden;
 }
+
 
 .light h4 {
     color: var(--coal);
@@ -193,6 +207,8 @@ h5:hover {
 }
 
 #coalette {
+    justify-self: center;
+    min-width: 100px;
     background-color: var(--coalette);
 }
 
@@ -271,10 +287,81 @@ footer p {
     color: var(--paper);
 }
 
-@media only screen and (max-width: 400) {
-    section {
-        display: flex;
-        flex-flow: column nowrap;
+@media only screen and (max-width: 800px) and (min-width: 501px) {
+    nav ul {
+        flex-flow: row nowrap;
     }
 
+    section {
+        overflow: scroll;
+    }
+
+    .typography,
+    .text-styles {
+        grid-template-columns: 100%;
+    }
+
+    html {
+        font-size: 18px;
+    }
+
+    section p {
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 500px) and (min-width: 350px) {
+
+    .typography,
+    .text-styles {
+        grid-template-columns: 100%;
+    }
+
+    section {
+        overflow: scroll;
+    }
+
+    html {
+        font-size: 14px !important;
+    }
+
+}
+
+@media only screen and (max-width:350px) {
+
+    .typography,
+    .text-styles {
+        justify-content: center;
+        grid-template-columns: 100%;
+
+    }
+
+    nav ul {
+        padding: 0;
+        justify-content: center;
+    }
+
+    section {
+        overflow: scroll;
+    }
+
+    html {
+        font-size: 12px !important;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
+    h5 {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
 }
