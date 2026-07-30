@@ -1,139 +1,390 @@
-<!DOCTYPE html>
-<html lang="en">
+:root {
+    --sky: #057eff;
+    --paper: #f9ffe0;
+    --coal: #22252e;
+    --coalette: #9c9da0;
+    --milk: #e2e38f;
+}
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>dave styleguide</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Archivo:ital,wght@0,100..900;1,100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
-        rel="stylesheet" />
-</head>
+/* impostazione testi */
+html {
+    font-size: 21px;
+}
 
-<body>
-    <!-- navbar -->
-    <nav>
-        <ul>
-            <li><a href="#colors"> colors </a></li>
-            <li><a href="#fonts"> fonts </a></li>
-            <li><a href="#textstyle"> text styles </a></li>
-        </ul>
-    </nav>
+.anchor {
+    position: relative;
+    top: -4rem;
+}
 
-    <main>
-        <!-- title-->
+main {
+    width: 90%;
+    justify-self: center;
+}
 
-        <h1 class="title"> dave's website styleguide</h1>
+h1 {
+    color: var(--coal);
+    margin: 20% 10% 1% 5%;
+    font-family: "EB Garamond";
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 4rem;
+}
 
-        <!-- Colors section -->
-        <a class="anchor" id="colors"></a>
-        <h2 class="sottotitolo"> colors </h2>
-        <section class="color">
+h2 {
+    color: var(--coalette);
+    margin-right: 5%;
+    padding-right: 1rem;
+    font-family: "Archivo Narrow";
+    font-size: 3rem;
+    font-weight: 40;
+    mix-blend-mode: multiply;
+    justify-self: right;
+}
+
+h4 {
+
+    color: var(--coal);
+    font-family: "Archivo";
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+h5 {
+    margin: 0.5%;
+    color: var(--sky);
+    padding-left: 3rem;
+    font-family: "EB Garamond";
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+li {
+    color: var(--coal);
+    font-family: "Archivo Narrow";
+    font-size: 1.25rem;
+    font-weight: 40;
+}
+
+p {
+    margin: auto;
+    color: var(--coal);
+    font-family: "Archivo";
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.25rem;
+}
 
 
-            <div id="sky" class="dark">
-                <h4>sky</h4>
-                <h5>#057eff</h5>
-            </div>
+/* navigazione */
 
-            <div id="paper" class="dark">
-                <h4>paper</h4>
-                <h5>#f9ffe0</h5>
-            </div>
+nav {
+    z-index: 10;
+    width: 90%;
+    position: sticky;
+    top: 20px;
+    left: 20px;
+    background-color: var(--paper);
+    border: 1px solid var(--coal);
+    box-shadow: 0px 10px var(--coal);
+}
 
-            <div id="milk" class="dark">
-                <h4>milk</h4>
-                <h5>#e2e38f</h5>
-            </div>
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+}
 
-            <div id="coal" class="light">
-                <h4>coal</h4>
-                <h5>#22252e</h5>
-            </div>
+nav ul li {
+    padding: 10px;
 
-            <div id="coalette" class="light">
-                <h4>coalette</h4>
-                <h5>#464b5c</h5>
-            </div>
+}
 
-        </section>
+nav a {
+    text-decoration: none;
+    color: var(--coal)
+}
 
-        <!-- fonts section -->
-        <a class="anchor" id="fonts"></a>
-        <h2 class="sottotitolo"> fonts </h2>
-        <section class="typography">
+/* sfondo */
+html {
 
-            <div id="font1">
-                <h3>Archivo</h3>
-                <p>Testo normale</p>
-                <p><em>Testo Italic</em></p>
-                <p><strong>Testo grassetto</strong></p>
-                <p><em> the lazy dog jumped over the quick brown fox.</em> <br />Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. In facilisis enim non nulla placerat tempus.<strong> Aliquam sollicitudin augue
-                        urna,</strong>
-                    semper gravida libero pharetra ac. Sed non diam augue.</p>
-            </div>
+    background-image: linear-gradient(-185deg, var(--sky), var(--paper), var(--milk), var(--coal));
+}
 
-            <div id="font2">
-                <h3>Archivo Narrow</h3>
-                <p>Testo normale</p>
-                <p><em>Testo Italic</em></p>
-                <p><strong>Testo grassetto</strong></p>
-                <p><em> the lazy dog jumped over the quick brown fox.</em> <br />Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. In facilisis enim non nulla placerat tempus.<strong> Aliquam sollicitudin augue
-                        urna,</strong>
-                    semper gravida libero pharetra ac. Sed non diam augue.</p>
-            </div>
+/* section basis */
+section {
+    border: 1px solid var(--coal);
+    box-shadow: 0px 10px var(--coal);
+    padding: 20px 20px 40px 20px;
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--paper);
+}
 
-            <div id="font3">
-                <h3>EB Garamond</h3>
-                <p>Testo normale</p>
-                <p><em>Testo Italic</em></p>
-                <p><strong>Testo grassetto</strong></p>
-                <p><em> the lazy dog jumped over the quick brown fox.</em> <br />Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. In facilisis enim non nulla placerat tempus.<strong> Aliquam sollicitudin augue
-                        urna,</strong>
-                    semper gravida libero pharetra ac. Sed non diam augue.</p>
+.sottotitolo {
+    position: relative;
+    top: 2.6rem;
+}
 
-            </div>
-        </section>
+/* color section  */
 
-        <!-- textstyle section -->
-        <a class="anchor" id="textstyle"></a>
-        <h2 class="sottotitolo">text styles </h2>
-        <section class="text-styles">
-            <div>
-                <h1> H1 titoli principali</h1>
-                <h5> H5 corpo sottotitolo</h5>
-                <h2> H2 Sottotitolo grande</h2>
-            </div>
+.color div {
+    max-width: 500px;
+    min-width: 80px;
 
-            <div>
-                <h4> H4 Titoli secondari</h4>
-                <p> P Corpo del testo, blocchi di testo principale paragrafi.</p>
-                <p> P Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Proin fringilla rutrum tortor at convallis. Vivamus lacus risus,
-                    efficitur vel risus at, rutrum gravida nibh. Cras nec gravida tortor. Donec a urna quis risus
-                    vestibulum aliquet.
-                </p>
+    height: auto;
+    justify-content: space-around;
+    margin: 10px;
+    border: 1px solid var(--coal);
+    box-shadow: 0px 10px var(--coal);
+    overflow: hidden;
+}
 
-                <h4> H4 Titoli secondari</h4>
-                <p> P Corpo del testo, blocchi di testo principale paragrafi.</p>
-                <p> P Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Proin fringilla rutrum tortor at convallis. Vivamus lacus risus,
-                    efficitur vel risus at, rutrum gravida nibh. Cras nec gravida tortor. Donec a urna quis risus
-                    vestibulum aliquet.
-                </p>
 
-            </div>
-        </section>
-        <footer>
-            <p> dave.studio 2026 </p>
-        </footer>
-    </main>
-</body>
+.light h4 {
+    color: var(--coal);
+    background-color: white;
+}
 
-</html>
+.light h5 {
+    color: white;
+}
+
+.dark h4 {
+    color: white;
+    background-color: var(--coal);
+}
+
+.dark h5 {
+    color: var(--coal);
+}
+
+.light h4,
+.dark h4 {
+    padding: 20px 10px 10px 10px;
+    margin: 5px;
+    opacity: 50%;
+}
+
+.light h5,
+.dark h5 {
+    padding: 2px;
+    margin: 3px 8px 3px 5px;
+    opacity: 50%;
+}
+
+.light h4:hover,
+h5:hover,
+.dark h4:hover,
+h5:hover {
+    opacity: 100%;
+}
+
+.color div:active {
+    box-shadow: 0px 2px var(--coal);
+    position: relative;
+    top: 8px;
+}
+
+#sky {
+    background-color: var(--sky);
+}
+
+#sky h4 {
+    color: var(--sky);
+}
+
+#paper {
+    background-color: var(--paper);
+}
+
+#paper h4 {
+    color: var(--paper);
+}
+
+#coal {
+    background-color: var(--coal);
+}
+
+#coal h4 {
+    color: var(--coal);
+}
+
+#coalette {
+    justify-self: center;
+    min-width: 100px;
+    background-color: var(--coalette);
+}
+
+#coalette h4 {
+    color: var(--coalette);
+}
+
+#milk {
+    background-color: var(--milk);
+}
+
+#milk h4 {
+    color: var(--milk);
+}
+
+
+/* sezione font*/
+
+.typography {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    line-height: 1rem;
+    font-weight: 100;
+    align-items: start;
+}
+
+.typography div {
+    padding: 20px 50px 20px 20px;
+    width: auto;
+}
+
+strong {
+    font-weight: 900;
+}
+
+em {
+    color: var(--coalette);
+    font-style: italic;
+    font-weight: 40;
+}
+
+
+#font1 h3,
+#font1 p {
+    font-family: "Archivo" !important;
+}
+
+#font2 h3,
+#font2 p {
+    font-family: "Archivo Narrow" !important;
+}
+
+#font3 h3,
+#font3 p {
+    font-family: "EB Garamond" !important;
+}
+
+/* sezione stili di testo*/
+
+.text-styles {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+
+/* sezione footer*/
+
+footer {
+    padding: 1rem;
+    margin: 4rem 0.5rem 0.5rem 0.5rem;
+    justify-self: end;
+    mix-blend-mode: normal;
+}
+
+footer p {
+    color: var(--paper);
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .typography,
+    .text-styles {
+        justify-content: center;
+        grid-template-columns: 100%;
+    }
+
+    .typography div {
+        padding: 20px 0;
+    }
+
+    nav {
+        width: auto;
+        margin: 0 10px;
+    }
+
+    nav ul {
+        padding: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    section {
+        flex-wrap: wrap;
+        overflow-x: auto;
+        padding: 20px 10px 40px 10px;
+    }
+
+    h1 {
+        margin-top: 30%;
+        font-size: 3rem;
+        line-height: 3.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
+    h5 {
+        margin-top: 1rem;
+        margin-left: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 601px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+    html {
+        font-size: 18px;
+    }
+
+    .typography,
+    .text-styles {
+        justify-content: center;
+        grid-template-columns: 100%;
+    }
+
+    section {
+        flex-wrap: wrap;
+        overflow-x: auto;
+    }
+
+    h1 {
+        font-size: 4rem;
+        line-height: 3.6rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 769px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+    html {
+        font-size: 21px;
+    }
+
+    .typography {
+        grid-template-columns: repeat(2, 45%);
+    }
+
+    section {
+        overflow-x: auto;
+    }
+
+    section p {
+        width: 80%;
+    }
+}
