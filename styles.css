@@ -291,27 +291,39 @@ footer p {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
+    html {
+        font-size: 12px;
+    }
+
     .typography,
     .text-styles {
         justify-content: center;
         grid-template-columns: 100%;
+    }
 
+    .typography div {
+        padding: 20px 0;
+    }
+
+    nav {
+        width: auto;
+        margin: 0 10px;
     }
 
     nav ul {
         padding: 0;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     section {
-        overflow: scroll;
-    }
-
-    html {
-        font-size: 12px !important;
+        flex-wrap: wrap;
+        overflow-x: auto;
+        padding: 20px 10px 40px 10px;
     }
 
     h1 {
+        margin-top: 30%;
         font-size: 3rem;
         line-height: 3.2rem;
     }
@@ -324,84 +336,50 @@ footer p {
     h5 {
         margin-top: 1rem;
         margin-left: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 601px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+    html {
+        font-size: 14px;
     }
 
-    /* Small devices (portrait tablets and large phones, 600px and up) */
-    @media only screen and (min-width: 600px) {
-
-        .typography,
-        .text-styles {
-            justify-content: center;
-            grid-template-columns: 100%;
-
-        }
-
-        nav ul {
-            padding: 0;
-            justify-content: center;
-        }
-
-        section {
-            overflow: scroll;
-        }
-
-        html {
-            font-size: 12px !important;
-        }
-
-        h1 {
-            font-size: 3rem;
-            line-height: 3.2rem;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-left: 0;
-        }
-
-        h5 {
-            margin-top: 1rem;
-            margin-left: 1rem;
-        }
+    .typography,
+    .text-styles {
+        justify-content: center;
+        grid-template-columns: 100%;
     }
 
-    /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 768px) {
-
-        .typography,
-        .text-styles {
-            grid-template-columns: 100%;
-        }
-
-        section {
-            overflow: scroll;
-        }
-
-        html {
-            font-size: 14px !important;
-        }
+    section {
+        flex-wrap: wrap;
+        overflow-x: auto;
     }
 
-    /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 992px) {
-        nav ul {
-            flex-flow: row nowrap;
-        }
-
-        section {
-            overflow: scroll;
-        }
-
-        .typography,
-        .text-styles {
-            grid-template-columns: 100%;
-        }
-
-        html {
-            font-size: 18px;
-        }
-
-        section p {
-            width: 80%;
-        }
+    h1 {
+        font-size: 4rem;
+        line-height: 3.6rem;
     }
+}
+
+/* Medium devices (landscape tablets, 769px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+    html {
+        font-size: 18px;
+    }
+
+    .typography {
+        grid-template-columns: repeat(2, 45%);
+    }
+
+    section {
+        overflow-x: auto;
+    }
+
+    section p {
+        width: 80%;
+    }
+}
