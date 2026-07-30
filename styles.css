@@ -328,7 +328,7 @@ footer p {
 
 }
 
-@media only screen and (max-width:350px) {
+@media only screen and (max-width:350px) and (orientation: portrait) {
 
     .typography,
     .text-styles {
@@ -342,7 +342,7 @@ footer p {
         justify-content: center;
     }
 
-    section {
+    section {                                        
         overflow: scroll;
     }
 
