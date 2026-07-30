@@ -1,0 +1,280 @@
+:root {
+    --sky: #057eff;
+    --paper: #f9ffe0;
+    --coal: #22252e;
+    --coalette: #9c9da0;
+    --milk: #e2e38f;
+}
+
+/* impostazione testi */
+
+h1 {
+    color: var(--coal);
+    margin: 20% 10% 1% 5%;
+    font-family: "EB Garamond";
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 4rem;
+}
+
+h2 {
+    color: var(--coalette);
+    margin-left: 5%;
+    padding-left: 1rem;
+    font-family: "Archivo Narrow";
+    font-size: 3rem;
+    font-weight: 40;
+    mix-blend-mode: multiply;
+}
+
+h4 {
+
+    color: var(--coal);
+    font-family: "Archivo";
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+h5 {
+    margin: 0.5%;
+    color: var(--sky);
+    padding-left: 3rem;
+    font-family: "EB Garamond";
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+li {
+    color: var(--coal);
+    font-family: "Archivo Narrow";
+    font-size: 1.25rem;
+    font-weight: 40;
+}
+
+p {
+    margin: auto;
+    color: var(--coal);
+    font-family: "Archivo";
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.25rem;
+}
+
+
+/* navigazione */
+
+nav {
+    z-index: 10;
+    width: 90%;
+    position: sticky;
+    top: 20px;
+    left: 20px;
+    background-color: var(--paper);
+    border: 1px solid var(--coal);
+    box-shadow: 0px 10px var(--coal);
+
+}
+
+nav li {
+    padding: 10px;
+    flex: 1;
+    display: inline-flex;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--coal)
+}
+
+/* sfondo */
+html {
+
+    background-image: linear-gradient(-185deg, var(--sky), var(--paper), var(--milk), var(--coal));
+}
+
+/* section basis */
+section {
+    border: 1px solid var(--coal);
+    box-shadow: 0px 10px var(--coal);
+    padding: 20px 20px 40px 20px;
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--paper);
+}
+
+.sottotitolo {
+    position: relative;
+    top: 2.6rem;
+}
+
+/* color section  */
+
+.color div {
+    min-width: 80px;
+    max-width: 110px;
+    width: auto;
+    height: auto;
+    justify-content: space-around;
+    margin: 10px;
+    border: 1px solid var(--coal);
+    box-shadow: 0px 10px var(--coal);
+}
+
+.light h4 {
+    color: var(--coal);
+    background-color: white;
+}
+
+.light h5 {
+    color: white;
+}
+
+.dark h4 {
+    color: white;
+    background-color: var(--coal);
+}
+
+.dark h5 {
+    color: var(--coal);
+}
+
+.light h4,
+.dark h4 {
+    padding: 20px 10px 10px 10px;
+    margin: 5px;
+    opacity: 50%;
+}
+
+.light h5,
+.dark h5 {
+    padding: 2px;
+    margin: 3px 8px 3px 5px;
+    opacity: 50%;
+}
+
+.light h4:hover,
+h5:hover,
+.dark h4:hover,
+h5:hover {
+    opacity: 100%;
+}
+
+.color div:active {
+    box-shadow: 0px 2px var(--coal);
+    position: relative;
+    top: 8px;
+}
+
+#sky {
+    background-color: var(--sky);
+}
+
+#sky h4 {
+    color: var(--sky);
+}
+
+#paper {
+    background-color: var(--paper);
+}
+
+#paper h4 {
+    color: var(--paper);
+}
+
+#coal {
+    background-color: var(--coal);
+}
+
+#coal h4 {
+    color: var(--coal);
+}
+
+#coalette {
+    background-color: var(--coalette);
+}
+
+#coalette h4 {
+    color: var(--coalette);
+}
+
+#milk {
+    background-color: var(--milk);
+}
+
+#milk h4 {
+    color: var(--milk);
+}
+
+
+/* sezione font*/
+
+.typography {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    line-height: 1rem;
+    font-weight: 100;
+    align-items: start;
+}
+
+.typography div {
+    padding: 20px 50px 20px 20px;
+    width: auto;
+}
+
+strong {
+    font-weight: 900;
+}
+
+em {
+    color: var(--coalette);
+    font-style: italic;
+    font-weight: 40;
+}
+
+
+#font1 h3,
+#font1 p {
+    font-family: "Archivo" !important;
+}
+
+#font2 h3,
+#font2 p {
+    font-family: "Archivo Narrow" !important;
+}
+
+#font3 h3,
+#font3 p {
+    font-family: "EB Garamond" !important;
+}
+
+/* sezione stili di testo*/
+
+.text-styles {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+
+/* sezione footer*/
+
+footer {
+    padding: 1rem;
+    margin: 4rem 0.5rem 0.5rem 0.5rem;
+    justify-self: end;
+    mix-blend-mode: normal;
+}
+
+footer p {
+    color: var(--paper);
+}
+
+@media only screen and (max-width: 400) {
+    section {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+}
