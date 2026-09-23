@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>tic tac toe</title>
+    <link rel="stylesheet" href="tictactoe.css" />
+</head>
+
+<body>
+    <main class="game">
+        <h1 class="sr-only">tic tac toe</h1>
+        <pre class="banner" aria-hidden="true">
+ _   _      _             _
+| |_(_)__  | |_ __ _ __  | |_ ___  ___
+|  _| / _| |  _/ _` / _| |  _/ _ \/ -_)
+ \__|_\__|  \__\__,_\__|  \__\___/\___|</pre>
+
+        <p id="status" class="status" aria-live="polite"></p>
+        <pre id="board" class="board"></pre>
+        <p id="score" class="score"></p>
+
+        <div class="controls">
+            <button id="restart" type="button">[r] new round</button>
+            <button id="mode" type="button"></button>
+        </div>
+
+        <p class="hint">click a cell or press 1-9</p>
+    </main>
+
+    <script src="tictactoe.js"></script>
+</body>
+
+</html>
