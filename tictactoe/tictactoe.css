@@ -1,0 +1,162 @@
+:root {
+    --sky: #057eff;
+    --paper: #f9ffe0;
+    --coal: #22252e;
+    --coalette: #9c9da0;
+    --milk: #e2e38f;
+    --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* sfondo */
+html {
+    min-height: 100%;
+    background-image: linear-gradient(-185deg, var(--sky), var(--paper), var(--milk), var(--coal));
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 16px;
+    display: grid;
+    place-items: center;
+    color: var(--coal);
+    font-family: var(--mono);
+}
+
+/* pannello */
+.game {
+    max-width: 100%;
+    padding: 24px clamp(16px, 5vw, 40px) 32px;
+    text-align: center;
+    background-color: var(--paper);
+    border: 1px solid var(--coal);
+    box-shadow: 0px 10px var(--coal);
+}
+
+pre {
+    margin: 0;
+    font-family: var(--mono);
+}
+
+.banner {
+    display: inline-block;
+    text-align: left;
+    color: var(--sky);
+    font-size: clamp(8px, 3.2vw, 15px);
+    line-height: 1.15;
+}
+
+.status {
+    min-height: 1.4em;
+    margin: 20px 0 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.score,
+.hint {
+    color: var(--coalette);
+}
+
+.score {
+    margin: 0 0 16px;
+}
+
+.hint {
+    margin: 20px 0 0;
+    font-size: 0.85rem;
+}
+
+/* griglia */
+.board {
+    display: inline-block;
+    margin: 16px 0;
+    text-align: left;
+    font-size: clamp(16px, 5.4vw, 28px);
+    line-height: 1.2;
+    user-select: none;
+}
+
+/* inline-block so backgrounds fill the whole line box, no seams between rows */
+.cell {
+    display: inline-block;
+}
+
+.cell.empty {
+    color: var(--coalette);
+}
+
+.cell.playable {
+    cursor: pointer;
+}
+
+.cell.playable.hot {
+    color: var(--coal);
+    background-color: var(--milk);
+}
+
+.cell.x {
+    color: var(--sky);
+}
+
+.cell.o {
+    color: var(--coal);
+}
+
+.cell.win {
+    color: var(--paper);
+    background-color: var(--coal);
+}
+
+.cell.x.win {
+    background-color: var(--sky);
+}
+
+.board.over {
+    cursor: pointer;
+}
+
+/* bottoni */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+button {
+    padding: 6px 12px;
+    color: var(--coal);
+    background-color: var(--paper);
+    border: 1px solid var(--coal);
+    box-shadow: 0px 4px var(--coal);
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--milk);
+}
+
+button:active {
+    box-shadow: 0px 1px var(--coal);
+    transform: translateY(3px);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--sky);
+    outline-offset: 2px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
